@@ -1,0 +1,10 @@
+<swiper class='lunbo' indicator-dots="true" autoplay="true" interval="3000">
+<swiper-item><image src='/image/春.jpg'></image></swiper-item>
+<swiper-item><image src='/image/夏.jpg'></image></swiper-item>
+<swiper-item><image src='/image/秋.jpg'></image></swiper-item>
+<swiper-item><image src='/image/冬.jpg'></image></swiper-item>
+</swiper>
+
+<view class="weather"> 
+  <text class="green">{{weatherData}}</text> 
+  </view>
