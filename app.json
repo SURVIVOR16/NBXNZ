@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/test/test",
+    "pages/logs/logs",
+    "pages/index/talkPage"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "闹不休闹钟",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/clock.jpg",
+        "selectedIconPath": "image/clock.jpg",
+        "text": "闹钟"
+      },
+      {
+        "pagePath": "pages/test/test",
+        "iconPath": "image/weather.jpg",
+        "selectedIconPath": "image/weather.jpg",
+        "text": "天气"
+      }
+
+    ]
+  }
+
+}
+
+  
