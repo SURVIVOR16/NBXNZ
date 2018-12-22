@@ -1,3 +1,7 @@
+硬件端
+硬件.ino
+
+微信端
 utils包含（util.js和wxchart.js）
 
 
