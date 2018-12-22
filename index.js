@@ -2,6 +2,7 @@
 
 
 
+
 var util = require('../../utils/util.js');
 
 Page({
@@ -13,32 +14,21 @@ Page({
 
   getTime: function () {
 
-    var Ye = util.Ye(new Date());
-    var Mo = util.Mo(new Date());
-    var Da = util.Da(new Date());
-    var ho = util.ho(new Date());
-    var mi = util.mi(new Date());
-    var se = util.se(new Date());
-
-    let time = util.formatDate(new Date());
-    let date = util.getDates(1, time);
+    var time = util.formatTime(new Date());
+    let tim = util.formatDate(new Date());
+    let date = util.getDates(1, tim);
     var We = date
 
     this.setData({
 
-      Ye: Ye,
-      Mo: Mo,
-      Da: Da,
+      time: time,
       We: We,
-      ho: ho,
-      mi: mi,
-      se: se,
-
+    
 
     })
-    this.sendCmd(this.data.Ye, this.data.Mo, this.data.Da, this.data.We, this.data.ho, this.data.mi, this.data.se, this.data.hour, this.data.minute, this.data.on);
+    this.sendCmd(this.data.We, this.data.time,this.data.hour, this.data.minute, this.data.on);
 
-    console.log(Ye, Mo, Da, We, ho, mi, se)
+    console.log(We)
 
   },
 
@@ -51,13 +41,13 @@ Page({
       minute: e.detail.value.setminute,
       on: e.detail.value.onoroff,
     })
-    this.sendCmd(this.data.Ye, this.data.Mo, this.data.Da, this.data.We, this.data.ho, this.data.mi, this.data.se, this.data.hour, this.data.minute, this.data.on);
+    this.sendCmd(this.data.We, this.data.time, this.data.hour, this.data.minute, this.data.on);
   },
 
 
 
 
-  sendCmd: function (Ye, Mo, Da, We, ho, mi, se, hour, minute, on) {
+  sendCmd: function (We, time,  hour, minute, on) {
     var _this = this;
     wx.request({
       url: 'https://api.heclouds.com/devices/502965435/datapoints?type=3',
@@ -66,9 +56,12 @@ Page({
       },
       method: 'POST',
       data: {
-        Ye, Mo, Da, We, ho, mi, se,
+        
+        We, 
+        time,
         minute,
-        hour, on
+        hour, 
+        on
       },
       success: function (res) {
         console.log("success!!")
