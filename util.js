@@ -11,6 +11,24 @@ const formatDate = date => {
   return [year, month, day].map(formatNumber).join('-')
 
 }
+const formatTime = date => {
+
+  const Y = date.getFullYear()
+
+  const M = date.getMonth() + 1
+
+  const D = date.getDate()
+
+  const h = date.getHours()
+
+  const m = date.getMinutes()
+
+  const s = date.getSeconds()
+
+
+
+  return [Y, M, D, h, m, s].map(formatNumber).join('/') + '/'
+}
 
 function getDates(days, todate) {
 
@@ -50,30 +68,6 @@ function dateLater(dates, later) {
 }
 
 
-const Ye = date => {
-  const Ye = date.getFullYear()
-  return Ye
-} 
-const Mo = date => {
-  const Mo = date.getMonth() + 1
-  return Mo
-} 
-const Da = date => {
-  const Da = date.getDate()
-  return Da
-} 
-const ho = date => {
-  const ho = date.getHours()
-  return ho
-} 
-const mi = date => {
-  const mi = date.getMinutes()
-  return mi
-} 
-const se = date => {
-  const se = date.getSeconds()
-  return se
-} 
 const formatNumber = n => {
 
   n = n.toString()
@@ -83,16 +77,12 @@ const formatNumber = n => {
 }
 module.exports = {
   formatDate: formatDate,
+  formatTime: formatTime,
   getDates: getDates,
   dateLater: dateLater,
-  Ye: Ye,
-  Mo: Mo,
-  Da: Da,
-  ho: ho,
-  mi: mi,
-  se: se,
 
 }
+
 
 
 
