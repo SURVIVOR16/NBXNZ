@@ -1,3 +1,4 @@
+//滑动图片的设置
 <swiper class='lunbo' indicator-dots="true" autoplay="true" interval="3000">
 <swiper-item><image class='lunbo'src='/image/春.jpg'></image></swiper-item>
 <swiper-item><image class='lunbo'src='/image/夏.jpg'></image></swiper-item>
