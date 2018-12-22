@@ -6,7 +6,7 @@
 
 <view class="container1">
   <button bindtap="getTime"class="btn1" hover-class='btn_hover'>时钟对时</button>
-  <text wx:if="{{Y}}"wx:if="{{M}}"wx:if="{{D}}"wx:if="{{W}}"wx:if="{{h}}"wx:if="{{m}}"wx:if="{{s}}">{{Y}}/{{M}}/{{D}}/{{W}}/{{h}}/{{m}}/{{s}}</text>
+  <text wx:if="{{Ye}}"wx:if="{{Mo}}"wx:if="{{Da}}"wx:if="{{We}}"wx:if="{{ho}}"wx:if="{{mi}}"wx:if="{{se}}">{{Ye}}/{{Mo}}/{{Da}}/{{We}}/{{ho}}/{{mi}}/{{se}}</text>
 </view>
 
 <view class="container2">
