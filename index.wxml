@@ -6,7 +6,7 @@
 
 <view class="container1">
   <button bindtap="getTime"class="btn1" hover-class='btn_hover'>时钟对时</button>
-  <text wx:if="{{Ye}}"wx:if="{{Mo}}"wx:if="{{Da}}"wx:if="{{We}}"wx:if="{{ho}}"wx:if="{{mi}}"wx:if="{{se}}">{{Ye}}/{{Mo}}/{{Da}}/{{We}}/{{ho}}/{{mi}}/{{se}}</text>
+<text wx:if="{{time}}"wx:if="{{We}}">{{time}}{{We}}</text>
 </view>
 
 <view class="container2">
@@ -19,7 +19,6 @@
  <view>闹钟:{{hour}}：{{minute}}</view>
 </view>
 <button bindtap='goToTalkPage'class="btn1"hover-class='btn_hover'>室内温湿度曲线</button>
-
 
 
 
