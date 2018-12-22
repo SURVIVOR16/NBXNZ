@@ -10,8 +10,5 @@ text-align:left;
   text-align:left;
 }
 .lunbo{
-  width:100%
-}
-.lunbo{
-  width:100%
+  width:100%;
 }
