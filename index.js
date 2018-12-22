@@ -13,51 +13,51 @@ Page({
 
   getTime: function () {
 
-    var Y = util.Y(new Date());
-    var M = util.M(new Date());
-    var D = util.D(new Date());
-    var h = util.h(new Date());
-    var m = util.m(new Date());
-    var s = util.s(new Date());
+    var Ye = util.Ye(new Date());
+    var Mo = util.Mo(new Date());
+    var Da = util.Da(new Date());
+    var ho = util.ho(new Date());
+    var mi = util.mi(new Date());
+    var se = util.se(new Date());
 
     let time = util.formatDate(new Date());
     let date = util.getDates(1, time);
-    var W = date
+    var We = date
 
     this.setData({
 
-      Y: Y,
-      M: M,
-      D: D,
-      W: W,
-      h: h,
-      m: m,
-      s: s,
+      Ye: Ye,
+      Mo: Mo,
+      Da: Da,
+      We: We,
+      ho: ho,
+      mi: mi,
+      se: se,
 
 
     })
-    this.sendCmd(this.data.Y, this.data.M, this.data.D, this.data.W, this.data.h, this.data.m, this.data.s, this.data.hour, this.data.minute, this.data.on);
+    this.sendCmd(this.data.Ye, this.data.Mo, this.data.Da, this.data.We, this.data.ho, this.data.mi, this.data.se, this.data.hour, this.data.minute, this.data.on);
 
-    console.log(Y, M, D, W, h, m, s)
+    console.log(Ye, Mo, Da, We, ho, mi, se)
 
   },
 
 
   searchBox: function (e) {
     const that = this;
-    let hour, minute, on, h1, m1;
+    let hour, minute, on;
     that.setData({
       hour: e.detail.value.sethour,
       minute: e.detail.value.setminute,
       on: e.detail.value.onoroff,
     })
-    this.sendCmd(this.data.Y, this.data.M, this.data.D, this.data.W, this.data.h, this.data.m, this.data.s, this.data.hour, this.data.minute, this.data.on);
+    this.sendCmd(this.data.Ye, this.data.Mo, this.data.Da, this.data.We, this.data.ho, this.data.mi, this.data.se, this.data.hour, this.data.minute, this.data.on);
   },
 
 
 
 
-  sendCmd: function (Y, M, D, W, h, m, s, hour, minute, on) {
+  sendCmd: function (Ye, Mo, Da, We, ho, mi, se, hour, minute, on) {
     var _this = this;
     wx.request({
       url: 'https://api.heclouds.com/devices/502965435/datapoints?type=3',
@@ -66,7 +66,7 @@ Page({
       },
       method: 'POST',
       data: {
-        Y, M, D, W, h, m, s,
+        Ye, Mo, Da, We, ho, mi, se,
         minute,
         hour, on
       },
@@ -181,3 +181,4 @@ Page({
 
 
 })
+
