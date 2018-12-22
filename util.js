@@ -1,5 +1,6 @@
+//微信小程序是自带日期和时间的获取的，但是星期则要经过一些函数的计算才能得到
 
-
+//用于获取实时日期，以便计算星期
 const formatDate = date => {
 
   const year = date.getFullYear()
@@ -11,6 +12,7 @@ const formatDate = date => {
   return [year, month, day].map(formatNumber).join('-')
 
 }
+//直接获取日期和时间
 const formatTime = date => {
 
   const Y = date.getFullYear()
@@ -30,6 +32,7 @@ const formatTime = date => {
   return [Y, M, D, h, m, s].map(formatNumber).join('/') + '/'
 }
 
+//计算星期
 function getDates(days, todate) {
 
   
@@ -75,6 +78,8 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 
 }
+
+//一定要把上面所有的函数写在里边，否则函数无法运行
 module.exports = {
   formatDate: formatDate,
   formatTime: formatTime,
