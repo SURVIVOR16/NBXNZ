@@ -50,33 +50,29 @@ function dateLater(dates, later) {
 }
 
 
-const Y = date => {
-  const Y = date.getFullYear()
-  return Y
+const Ye = date => {
+  const Ye = date.getFullYear()
+  return Ye
 } 
-const M = date => {
-  const M = date.getMonth() + 1
-  return M
+const Mo = date => {
+  const Mo = date.getMonth() + 1
+  return Mo
 } 
-const D = date => {
-  const D = date.getDate()
-  return D
+const Da = date => {
+  const Da = date.getDate()
+  return Da
 } 
-const W = date => {
-  const W = date.getWeekday()
-  return W
+const ho = date => {
+  const ho = date.getHours()
+  return ho
 } 
-const h = date => {
-  const h = date.getHours()
-  return h
+const mi = date => {
+  const mi = date.getMinutes()
+  return mi
 } 
-const m = date => {
-  const m = date.getMinutes()
-  return m
-} 
-const s = date => {
-  const s = date.getSeconds()
-  return s
+const se = date => {
+  const se = date.getSeconds()
+  return se
 } 
 const formatNumber = n => {
 
@@ -89,13 +85,14 @@ module.exports = {
   formatDate: formatDate,
   getDates: getDates,
   dateLater: dateLater,
-  Y: Y,
-  M: M,
-  D: D,
-  h: h,
-  m: m,
-  s: s,
+  Ye: Ye,
+  Mo: Mo,
+  Da: Da,
+  ho: ho,
+  mi: mi,
+  se: se,
 
 }
+
 
 
