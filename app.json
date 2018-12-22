@@ -13,6 +13,7 @@
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh": true
   },
+  //底部转换页面的按钮设置
   "tabBar": {
     "color": "#dddddd",
     "selectedColor": "#3cc51f",
@@ -20,8 +21,8 @@
     "backgroundColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "iconPath": "image/clock.jpg",
+        "pagePath": "pages/index/index",//页面
+        "iconPath": "image/clock.jpg",//小图标
         "selectedIconPath": "image/clock.jpg",
         "text": "闹钟"
       },
