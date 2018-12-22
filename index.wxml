@@ -1,16 +1,16 @@
 
 <!--index.wxml-->
 
-<image style="width:100%;height:200px;margin:0px;"mode="scaleToFill"src="{{imageSrc}}"></image>
+<image style="width:100%;height:200px;margin:0px;"mode="scaleToFill"src="{{imageSrc}}"></image>//图片设置
 
 
 <view class="container1">
-  <button bindtap="getTime"class="btn1" hover-class='btn_hover'>时钟对时</button>
-<text wx:if="{{time}}"wx:if="{{We}}">{{time}}{{We}}</text>
+  <button bindtap="getTime"class="btn1" hover-class='btn_hover'>时钟对时</button>//该按钮用于触发getTime函数
+<text wx:if="{{time}}"wx:if="{{We}}">{{time}}{{We}}</text>//判断time和wx是否存在，若存在则显示
 </view>
 
 <view class="container2">
-  <form bindsubmit='searchBox'>
+  <form bindsubmit='searchBox'>//输入框部分设置
       <input placeholder="输入时"type='number' class='userBox' name='sethour'></input>
       <input placeholder="输入分"type='number' class='pwdBox' name='setminute'></input>
       <input placeholder="输入1或0表示开启或关闭闹钟"type='number' class='userBox' name='onoroff'></input>
@@ -18,7 +18,7 @@
   </form> 
  <view>闹钟:{{hour}}：{{minute}}</view>
 </view>
-<button bindtap='goToTalkPage'class="btn1"hover-class='btn_hover'>室内温湿度曲线</button>
+<button bindtap='goToTalkPage'class="btn1"hover-class='btn_hover'>室内温湿度曲线</button>该按钮用于触发goToTalkPage函数
 
 
 
